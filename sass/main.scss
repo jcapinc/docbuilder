@@ -1,0 +1,20 @@
+body {
+	padding:0px;
+	margin:0px;
+}
+.container{
+	display:flex;
+	height:100vh;
+	flex-direction: row;
+}
+
+.sidebar{
+	height: 100vh;
+	flex: 1 1 300px;
+}
+
+.content{
+	flex: 2 3 100%;
+}
+
+#editor{}

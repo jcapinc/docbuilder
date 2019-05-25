@@ -4,12 +4,12 @@
   "description": "Document Builder",
   "main": "main.js",
   "scripts": {
-    "test": "mocha ",
+    "test": "./node_modules/.bin/mocha ./tests/**/*.js",
     "start": "electron . --inspect=9229",
     "build-start": "npm run build ; npm run start",
     "build": "run-p build:*",
     "build:webpack": "webpack",
-    "build:sass": "node-sass -r sass/bootstrap.scss build/style.css --source-map true",
+    "build:sass": "node-sass -r sass/main.scss build/style.css --source-map true",
     "build:node": "tsc -p tsconfig.node.json",
     "watch": "run-p watch:*",
     "watch:webpack": "npm run build:webpack -- -w",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/jcapinc/docbuilder#readme",
   "devDependencies": {
+    "@types/quill": "^2.0.2",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "node-sass": "^4.12.0",
@@ -41,6 +42,7 @@
   "dependencies": {
     "electron": "^5.0.0",
     "quill": "^1.3.6",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

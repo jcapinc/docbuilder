@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"outFile": "./main.js"
+		"outFile": "./main.js",
+		"esModuleInterop": true
 	},
 	"include":[
 		"main.ts"
